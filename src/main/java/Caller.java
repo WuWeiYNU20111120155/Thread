@@ -5,10 +5,10 @@ public class Caller implements Runnable{
     public  Caller(Callme targ,String s){
         target =  targ;
         msg = s;
-        t = new Thread(this);
-        t.start();
+        t = new Thread(this);//
+        t.start();//线程开始
     }
-    public void run() {
+    public void run() {//实现接口Runnable的run方法
         target.call(msg);
     }
 }
